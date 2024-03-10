@@ -96,7 +96,11 @@ function multiplication(a, b) {
 }
 
 function division(a, b) {
-  return a / b
+  if (b === 0) {
+    return "lol"
+  } else {
+    return a / b
+  }
 }
 
 
