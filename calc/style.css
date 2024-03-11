@@ -1,0 +1,85 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: rgb(208, 248, 232);
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background-color: rgb(39, 11, 11);
+}
+
+.calculator {
+  max-width: 400px;
+  margin: auto;
+  border-radius: 3px;
+  padding: 12px;
+  background-color: #4b2e22;   /* 441e0e */
+  margin-top: 100px;
+  border: solid black;
+}
+
+
+.calculator-display {
+  width: 100%; /* Full width of the calculator */
+  margin-bottom: px; /* Spacing between display and buttons */
+  background-color: #a7abb1; /* Dark background for the display b8b8b8*/
+  color: #000000; /* White text color */
+  text-align: right; /* Aligns the text to the right */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 1px; /* Rounds the corners */
+  border: solid rgb(39, 11, 11) 4px;
+  overflow: hidden; /* Ensures all content fits within the display area */
+  word-wrap: break-word; /* Ensures long equations wrap */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  height: 80px;
+  padding-right: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0.5px 1.5px hsl(0, 1%, 30%);
+}
+
+.key-number, .key-operator, .key-clear, .key-sign, .key-decimal, .key-equal {
+  background-color: #379CC8; /* Light grey background for the buttons */
+  border: solid rgb(39, 11, 11) ; /* Removes the border */
+  padding: 20px; /* Makes buttons larger and easier to click */
+  font-size: 20px; /* Larger font size for visibility */
+  border-radius: 5px; /* Rounds the corners */
+  cursor: pointer; /* Changes cursor to indicate clickable items */
+}
+
+.key-number[data-number="0"], .key-clear {
+  grid-column: span 2;
+}
+
+.key-number, .key-decimal {
+  background-color: #0097d8;
+}
+
+.key-number:active, .key-decimal:active {
+  background-color: #3fc5ff;
+}
+
+.key-operator, .key-equal {
+  background-color: rgb(218, 218, 57);
+}
+
+.key-operator:active, .key-equal:active {
+  background-color: rgb(251, 251, 100);
+}
+
+.key-sign, .key-clear {
+  background-color: rgb(33, 168, 99);
+}
+
+.key-sign:active, .key-clear:active {
+  background-color: rgb(72, 228, 147);
+}

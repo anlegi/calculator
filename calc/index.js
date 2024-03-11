@@ -4,6 +4,7 @@ const operations = document.querySelectorAll(".key-operator")
 const equal = document.querySelector("#equal")
 const allClearButton = document.getElementById("all-clear")
 const dotButton = document.getElementById("dot")
+const posNegButton = document.getElementById("positive-neg")
 
 
 let displayValue1 = ""
@@ -83,6 +84,28 @@ dotButton.addEventListener("click", event => { // checks if values already have 
 })
 
 
+posNegButton.addEventListener("click", event => {
+  let currentValue = display.innerText
+
+  if (currentValue !== "" && currentValue !== "0") { // is current value not empty or a zero
+    if (currentValue.charAt(0) === "-") { // charAt returns the character at a specified index position in a string
+      currentValue = currentValue.slice(1) // if there is a negative, then slice returns selected array elements as a new array
+    } else { // in this case just the number without the negative sign
+      currentValue = "-" + currentValue // adds negative sign
+    }
+
+    display.innerText = currentValue
+    if (!operator) {
+      displayValue1 = currentValue
+    } else {
+      displayValue2 = currentValue
+    }
+  }
+})
+
+
+
+
 function addition(a, b) {
   return a + b
 }
@@ -97,7 +120,7 @@ function multiplication(a, b) {
 
 function division(a, b) {
   if (b === 0) {
-    return "lol"
+    return "LOL"
   } else {
     return a / b
   }
