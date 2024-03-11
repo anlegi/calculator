@@ -22,6 +22,7 @@ body {
   background-color: #4b2e22;   /* 441e0e */
   margin-top: 100px;
   border: solid black;
+  box-shadow: 5px 5px #777777;
 }
 
 
@@ -96,7 +97,7 @@ footer a:hover {
 }
 
 footer {
-  margin-top: auto;
+  margin-top: 10px;
   background-color: rgb(208, 248, 232);
   text-align: center;
   padding: 10px 0;
