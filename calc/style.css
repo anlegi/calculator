@@ -83,3 +83,21 @@ body {
 .key-sign:active, .key-clear:active {
   background-color: rgb(72, 228, 147);
 }
+
+a, p, .fa-brands, fa-calculator {
+  text-decoration: none;
+  color: rgb(62, 61, 61);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+}
+
+footer a:hover {
+  color: rgb(33, 168, 99);
+}
+
+footer {
+  margin-top: auto;
+  background-color: rgb(208, 248, 232);
+  text-align: center;
+  padding: 10px 0;
+}
